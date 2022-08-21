@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "github.com/monkrus/grpc-from0;grpc_from0";
+
+service Adder {
+    rpc Add(AddRequest) returns (AddResponce) {}
+}
+
+message AddRequest {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message AddResponce {
+    int32 result = 1;
+}
