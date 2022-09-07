@@ -1,11 +1,1 @@
-protoc --go_out=pkg/api --go_opt=paths=source_relative api/proto/adder.proto
-
-
-protoc -I=api/proto --go_out=pkg/api --go-grpc_out=pkg/api api/proto/adder.proto
-но создает лишние папки
-
-
-
-
-
-option go_package = "github.com/monkrus/grpc-from0;grpc_from0";
+protoc -I=api/proto --go_out=. --go-grpc_out=. api/proto/adder.proto

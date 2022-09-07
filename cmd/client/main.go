@@ -33,6 +33,8 @@ func main() {
 		log.Fatal("error connect")
 	}
 
+	defer conn.Close()
+
 	client := api.NewAdderClient(conn)
 	res, err := client.Add(context.Background(), &api.AddRequest{X: int32(x), Y: int32(y)})
 	if err != nil {
