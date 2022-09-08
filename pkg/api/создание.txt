@@ -1,1 +1,7 @@
 protoc -I=api/proto --go_out=. --go-grpc_out=. api/proto/adder.proto
+
+
+
+mkdir -p google/api
+curl https://github.com/googleapis/googleapis/blob/master/google/api/annotations.proto > google/api/annotations.proto
+curl https://github.com/googleapis/googleapis/blob/master/google/api/http.proto > google/api/http.proto
