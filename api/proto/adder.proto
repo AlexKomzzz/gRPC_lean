@@ -4,6 +4,9 @@ package api;
 
 option go_package = "./pkg/api";
 
+// https://www.youtube.com/watch?v=8SnC354B5Vc&t=1s
+import "google/api/annotations.proto";
+
 service Adder {
     rpc Add(AddRequest) returns (AddResponce) {}
 }
