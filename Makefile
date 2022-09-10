@@ -1,12 +1,12 @@
 proto:
-	protoc -I=api/proto --go_out=. --go-grpc_out=. api/proto/adder.proto
-	protoc -I . --grpc-gateway_out ./api/proto \
+	protoc -I=api/proto --go_out=./pkg  --go-grpc_out=./pkg api/proto/adder.proto
+	protoc -I ./api/proto --grpc-gateway_out ./pkg/api \
     --grpc-gateway_opt logtostderr=true \
     --grpc-gateway_opt paths=source_relative \
-    --grpc-gateway_opt generate_unbound_methods=true \
     api/proto/adder.proto
 
-cleare:
+	
+clear:
 	rm ./pkg/api/*.go
 
 create:
