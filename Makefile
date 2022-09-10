@@ -11,7 +11,9 @@ clear:
 
 create:
 	go build -v ./cmd/server
-	go build -v ./cmd/client
+
+gorun:
+	go run ./cmd/server
 
 start:
 	./server

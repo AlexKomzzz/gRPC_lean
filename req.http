@@ -1,0 +1,7 @@
+POST http://localhost:8081/add
+Content-Type: application/json
+
+{
+    "x": 1,
+    "y": 99
+}
