@@ -11,8 +11,9 @@ import "google/api/annotations.proto";
 service Adder {
     rpc Add(AddRequest) returns (AddResponce) {
         option (google.api.http) = {
-            post: "/add"
-            body: "*"
+           post: "/add"
+           body: "*"
+           //get: "/add/{x}/{y}"
         };
     }
 }
